@@ -1,0 +1,65 @@
+<!-- File: chatbot.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DataThrive ChatBot</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #chatbox {
+      width: 80%;
+      margin: 2rem auto;
+      max-width: 500px;
+    }
+    #chatlog {
+      background: #f1f5f9;
+      padding: 1rem;
+      height: 200px;
+      overflow-y: scroll;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    input {
+      padding: 0.5rem;
+      width: 75%;
+    }
+    button {
+      padding: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ask the DataBot</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="submit.html">Submit Ticket</a>
+      <a href="contact.html">Contact</a>
+      <a href="chatbot.html">ChatBot</a>
+    </nav>
+  </header>
+  <main>
+    <div id="chatbox">
+      <div id="chatlog"></div>
+      <input type="text" id="userInput" placeholder="Ask something...">
+      <button onclick="respond()">Send</button>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 DataThrive. All rights reserved.</p>
+  </footer>
+  <script>
+    const chatlog = document.getElementById("chatlog");
+    function respond() {
+      const input = document.getElementById("userInput").value;
+      const response = `DataBot: I'm just a demo! You asked: "${input}"`;
+      chatlog.innerHTML += `<p><strong>You:</strong> ${input}</p><p>${response}</p>`;
+      document.getElementById("userInput").value = "";
+      chatlog.scrollTop = chatlog.scrollHeight;
+    }
+  </script>
+</body>
+</html>
