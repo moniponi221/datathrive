@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DataThrive | Empowering Health Through Data</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -31,18 +31,6 @@
     <p>&copy; 2025 DataThrive. All rights reserved.</p>
   </footer>
 
-  <!-- Custom Chat Avatar -->
-  <div id="custom-chat-box">
-    <img 
-      src="https://images.unsplash.com/photo-1745434159123-4908d0b9df94?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-      alt="Customer Support Rep" 
-    />
-    <div class="chat-text">
-      <p><strong>Hi! I'm Ana.</strong></p>
-      <p>Tap here to chat!</p>
-    </div>
-  </div>
-
   <!-- Botpress Chatbot Scripts -->
   <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
   <script>
@@ -51,13 +39,12 @@
       hostUrl: "https://cdn.botpress.cloud/webchat/v2",
       messagingUrl: "https://messaging.botpress.cloud",
       clientId: "wvov5gvc",
-      lazyLoad: true,
-      hideWidget: true
+      // Customize these options:
+      botName: "Ana - DataThrive Support",
+      botAvatarUrl: "https://images.unsplash.com/photo-1745434159123-4908d0b9df94?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      enableTranscriptDownload: false,
+      showUserNameInput: false
     });
-
-    document.addEventListener("DOMContentLoaded", function () {
-      window.botpressWebChat.sendEvent({ type: "hide" }); // Start hidden
-    });
-
-    document.getElementById("custom-chat-box").addEventListener("click", function () {
-      window.botpressWebChat.sendEvent({ type: "show" }); // Show when avatar click
+  </script>
+</body>
+</html>
