@@ -29,7 +29,7 @@
   <footer>
     <p>&copy; 2025 DataThrive. All rights reserved.</p>
   </footer>
-  
+
   <!-- Custom Chat Avatar -->
   <div id="custom-chat-box" 
        style="cursor:pointer; position: fixed; bottom: 20px; right: 20px; background: #fff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 10px; width: 180px;"
@@ -50,21 +50,22 @@
   <script src="https://files.bpcontent.cloud/2025/05/30/18/20250530180716-WVOV5GVC.js"></script>
 
   <script>
-    window.botpressWebChat?.init({
-      botId: "wvov5gvc",
-      hostUrl: "https://cdn.botpress.cloud/webchat/v2",
-      messagingUrl: "https://messaging.botpress.cloud",
-      clientId: "wvov5gvc",
-      lazyLoad: true,
-      hideWidget: true
-    });
+    // Wait until Botpress webchat script is loaded and ready
+    window.addEventListener('load', () => {
+      // Ensure botpress is initialized and widget is hidden initially
+      window.botpressWebChat.init({
+        botId: "wvov5gvc",
+        hostUrl: "https://cdn.botpress.cloud/webchat/v2",
+        messagingUrl: "https://messaging.botpress.cloud",
+        clientId: "wvov5gvc",
+        lazyLoad: true,
+        hideWidget: true
+      });
 
-    document.addEventListener("DOMContentLoaded", () => {
-      // Attach click handler to your avatar AFTER botpress is loaded
-      const avatar = document.getElementById("custom-chat-box");
-      avatar.addEventListener("click", () => {
+      // Show chat widget when user clicks the avatar
+      document.getElementById('custom-chat-box').addEventListener('click', () => {
         if (window.botpressWebChat) {
-          window.botpressWebChat.toggle();  // Toggle the chat widget visibility
+          window.botpressWebChat.sendEvent({ type: 'show' });
         }
       });
     });
