@@ -32,16 +32,32 @@
   </footer>
 
   <!-- Custom Chat Avatar -->
-  <div id="custom-chat-box" onclick="window.botpressWebChat.sendEvent({ type: 'show' })" aria-label="Open chat with customer support">
+  <div id="custom-chat-box">
     <img 
       src="https://images.unsplash.com/photo-1745434159123-4908d0b9df94?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-      alt="Friendly customer support representative" 
+      alt="Customer Support Rep" 
     />
     <div class="chat-text">
-      <p><strong>Hi! I'm Ana, your support rep.</strong></p>
-      <p>Click here to start a chat!</p>
+      <p><strong>Hi! I'm Ana.</strong></p>
+      <p>Tap here to chat!</p>
     </div>
   </div>
 
   <!-- Botpress Chatbot Scripts -->
-  <sc
+  <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      botId: "wvov5gvc",
+      hostUrl: "https://cdn.botpress.cloud/webchat/v2",
+      messagingUrl: "https://messaging.botpress.cloud",
+      clientId: "wvov5gvc",
+      lazyLoad: true,
+      hideWidget: true
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      window.botpressWebChat.sendEvent({ type: "hide" }); // Start hidden
+    });
+
+    document.getElementById("custom-chat-box").addEventListener("click", function () {
+      window.botpressWebChat.sendEvent({ type: "show" }); // Show when avatar click
