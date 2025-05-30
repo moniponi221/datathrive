@@ -1,23 +1,87 @@
-/* Chatbot Avatar styles */
+/* General Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdf9f9;
+  color: #333;
+}
+
+header {
+  background-color: #ff6f91;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ff6f91;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta {
+  background-color: #ff6f91;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.cta:hover {
+  background-color: #ff4f70;
+}
+
+footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Chatbot Avatar Box */
 #custom-chat-box {
   display: flex;
   align-items: center;
   position: fixed;
   bottom: 30px;
-  left: 30px;
+  right: 30px;
   background-color: #fff;
-  border: 2px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border: 2px solid #eee;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   cursor: pointer;
   z-index: 9999;
   transition: transform 0.2s ease-in-out;
-  max-width: 300px;
 }
 
 #custom-chat-box:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 
 #custom-chat-box img {
@@ -31,5 +95,5 @@
 .chat-text p {
   margin: 2px 0;
   font-size: 14px;
-  color: #333;
+  color: #555;
 }
