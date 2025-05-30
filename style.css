@@ -1,83 +1,108 @@
-/* General Styling */
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* Reset */
+* {
   margin: 0;
   padding: 0;
-  background-color: #fdf9f9;
-  color: #333;
+  box-sizing: border-box;
 }
 
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
 header {
-  background-color: #ff6f91;
-  color: white;
-  padding: 20px;
+  background-color: #ffccd5;
+  padding: 1.5rem 1rem;
   text-align: center;
+  border-bottom: 3px solid #d6336c;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  color: #d6336c;
+}
+
+/* Navigation */
+nav {
+  margin-top: 0.5rem;
 }
 
 nav a {
-  color: white;
-  margin: 0 10px;
+  margin: 0 12px;
   text-decoration: none;
+  color: #d6336c;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #b02a52;
 }
 
-main {
-  padding: 40px;
+/* Hero Section */
+.hero {
   text-align: center;
+  padding: 3rem 1rem;
+  background-color: #ffe3e8;
 }
 
 .hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: #ff6f91;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #d6336c;
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta {
-  background-color: #ff6f91;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
+  background-color: #d6336c;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
   text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 .cta:hover {
-  background-color: #ff4f70;
+  background-color: #b02a52;
 }
 
+/* Footer */
 footer {
-  background-color: #f8f8f8;
-  padding: 20px;
   text-align: center;
+  padding: 1rem;
+  background-color: #ffccd5;
+  color: #333;
   font-size: 0.9rem;
-  color: #888;
+  border-top: 3px solid #d6336c;
 }
 
-/* Chatbot Avatar Box */
+/* Custom Chat Avatar Widget */
 #custom-chat-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   display: flex;
   align-items: center;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
   background-color: #fff;
-  border: 2px solid #eee;
-  border-radius: 16px;
-  padding: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 30px;
+  padding: 10px 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   z-index: 9999;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease;
 }
 
 #custom-chat-box:hover {
@@ -88,12 +113,17 @@ footer {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  margin-right: 12px;
   object-fit: cover;
+  margin-right: 10px;
 }
 
-.chat-text p {
-  margin: 2px 0;
-  font-size: 14px;
-  color: #555;
+#custom-chat-box .chat-text {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+#custom-chat-box .chat-text p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.2;
 }
