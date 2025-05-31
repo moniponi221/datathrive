@@ -120,21 +120,17 @@ footer {
 }
 
 .research-image {
-  width: 270px;   /* 90 × 3 */
-  height: 180px;  /* 60 × 3 */
-  object-fit: cover;
-  border-radius: 8px;
+  width: 600px; /* Try increasing to 700px or more for larger size */
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  display: block;
 }
 
-.research-text h3 {
-  margin: 0 0 10px;
-  color: #003366;
-  font-size: 20px;
-}
-
-.research-text p {
-  margin: 0;
-  color: #333;
-  font-size: 14px;
-  line-height: 1.5;
+.feature-text {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 10px;
 }
