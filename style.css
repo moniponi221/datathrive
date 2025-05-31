@@ -12,6 +12,7 @@ body {
   line-height: 1.6;
 }
 
+/* Header */
 header {
   background-color: #1E90FF;
   color: white;
@@ -35,6 +36,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Hero Section */
 .hero {
   text-align: center;
   padding: 60px 20px;
@@ -67,6 +69,7 @@ nav a:hover {
   background-color: #0046b3;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -75,54 +78,54 @@ footer {
   font-size: 0.9rem;
 }
 
-.wearable-highlight,
-.research-section {
+/* Shared styles for wearable + research sections */
+.section {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: #f0f8ff;
-  padding: 30px;
+  padding: 30px 20px;
   margin: 40px auto;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  max-width: 900px;
   gap: 20px;
-  text-align: center;
+  max-width: 960px;
+  flex-wrap: wrap;
 }
 
-.wearable-image,
-.research-image {
-  width: 200px;
-  height: 140px;
+.section img {
+  width: 180px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  flex-shrink: 0;
 }
 
-.wearable-text,
-.feature-text {
-  max-width: 700px;
-  padding: 10px;
+.section .text {
+  max-width: 500px;
 }
 
-.wearable-text h3,
-.feature {
-  font-size: 1.6rem;
+.section .text h3 {
+  font-size: 1.3rem;
   color: #004aad;
   margin-bottom: 10px;
 }
 
-.wearable-text p,
-.feature-text p {
+.section .text p {
   font-size: 1rem;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
-@media (min-width: 768px) {
-  .wearable-highlight,
-  .research-section {
-    flex-direction: row;
-    text-align: left;
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section img {
+    width: 100%;
+    height: auto;
   }
 }
