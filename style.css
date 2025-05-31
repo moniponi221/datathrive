@@ -86,10 +86,12 @@ footer {
 }
 
 .wearable-image {
-  width: 160px;
-  height: 160px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 12px;
+}
+
 }
 
 .wearable-text {
