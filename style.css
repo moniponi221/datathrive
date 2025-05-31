@@ -120,8 +120,8 @@ footer {
 }
 
 .research-image {
-   width: 40px;
-  height: 40px;
+  width: 120px;
+  height: 80px;
   object-fit: cover;
   border-radius: 8px;
 }
