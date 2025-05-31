@@ -44,13 +44,13 @@ nav a:hover {
 }
 
 .hero h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 10px;
   color: #005AE0;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 20px;
 }
 
@@ -58,7 +58,7 @@ nav a:hover {
   display: inline-block;
   background-color: #005AE0;
   color: white;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
@@ -78,24 +78,24 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Shared styles for wearable + research sections */
+/* Section Styles */
 .section {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #f0f8ff;
-  padding: 30px 20px;
-  margin: 40px auto;
+  padding: 24px 16px;
+  margin: 30px auto;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  gap: 20px;
-  max-width: 960px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  gap: 16px;
+  max-width: 860px;
   flex-wrap: wrap;
 }
 
 .section img {
-  width: 180px;
-  height: 120px;
+  width: 120px;  /* much smaller */
+  height: 80px;
   object-fit: cover;
   border-radius: 8px;
   flex-shrink: 0;
@@ -106,18 +106,18 @@ footer {
 }
 
 .section .text h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #004aad;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .section .text p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #333;
   line-height: 1.5;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 600px) {
   .section {
     flex-direction: column;
@@ -125,7 +125,7 @@ footer {
   }
 
   .section img {
-    width: 100%;
+    width: 100px;
     height: auto;
   }
 }
