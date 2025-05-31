@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,39 +20,29 @@
   </header>
 
   <main>
-    <!-- Your Data, Your Power Section with Video -->
-    <section class="section">
-      <div class="video-wrapper">
-        <video autoplay muted loop playsinline>
-          <source src="videos/workout-watch.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="text">
-        <h3>Your Data, Your Power</h3>
-        <p>DataThrive empowers users to turn their health data from wearable devices into rewards, insights, and impact.</p>
-      </div>
-    </section>
-
-    <!-- Get Rewarded Section -->
-    <section class="section">
-      <img src="https://images.unsplash.com/photo-1725137801173-1698d4cca0cd?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wearables">
-      <div class="text">
-        <h3>Get Rewarded for Staying Active</h3>
-        <p>You already wear your wearable every day—why not earn points for it? Stay active and start collecting rewards effortlessly.</p>
-      </div>
-    </section>
-
-    <!-- Research from Home Section -->
-    <section class="section">
-      <img src="https://images.unsplash.com/photo-1612831197630-ba9be548f9a9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Research at home">
-      <div class="text">
-        <h3>Earn $100 from Home</h3>
-        <p>Participate in research studies right from your home. Get paid up to $100 and help shape the future of health and tech.</p>
-      </div>
+    <section class="hero">
+      <h2>Your Data. Your Power.</h2>
+      <p>Join the movement. Earn rewards. Advance health.</p>
+      <a class="cta" href="about.html">Learn More</a>
     </section>
   </main>
 
+<div class="section">
+  <img src="https://images.unsplash.com/photo-1725137801173-1698d4cca0cd?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wearables">
+  <div class="text">
+    <h3>Get Rewarded for Staying Active</h3>
+    <p>You already wear your wearable every day—why not earn points for it? Stay active and start collecting rewards effortlessly.</p>
+  </div>
+</div>
+
+<div class="section">
+  <img src="https://images.unsplash.com/photo-1612831197630-ba9be548f9a9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Research at home">
+  <div class="text">
+    <h3>Earn $100 from Home</h3>
+    <p>Participate in research studies right from your home. Get paid up to $100 and help shape the future of health and tech.</p>
+  </div>
+</div>
+  
   <footer>
     <p>&copy; 2025 DataThrive. All rights reserved.</p>
   </footer>
@@ -61,7 +52,9 @@
   <script src="https://files.bpcontent.cloud/2025/05/30/18/20250530180716-WVOV5GVC.js"></script>
 
   <script>
+    // Wait until Botpress webchat script is loaded and ready
     window.addEventListener('load', () => {
+      // Ensure botpress is initialized and widget is hidden initially
       window.botpressWebChat.init({
         botId: "wvov5gvc",
         hostUrl: "https://cdn.botpress.cloud/webchat/v2",
@@ -71,12 +64,12 @@
         hideWidget: true
       });
 
-      const chatTrigger = document.getElementById('custom-chat-box');
-      if (chatTrigger) {
-        chatTrigger.addEventListener('click', () => {
+      // Show chat widget when user clicks the avatar
+      document.getElementById('custom-chat-box').addEventListener('click', () => {
+        if (window.botpressWebChat) {
           window.botpressWebChat.sendEvent({ type: 'show' });
-        });
-      }
+        }
+      });
     });
   </script>
 </body>
