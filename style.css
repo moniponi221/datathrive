@@ -142,10 +142,11 @@ footer {
 }
 
 .ceo-image {
-  width: 180px;
-  height: 180px;
+  width: 120px;      /* Much smaller size */
+  height: 120px;
   object-fit: cover;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .ceo-text {
