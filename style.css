@@ -26,14 +26,21 @@ header h1 {
 }
 
 nav a {
+  display: inline-block;
   color: white;
-  margin: 0 12px;
+  margin: 0 10px;
   text-decoration: none;
   font-weight: 500;
+  padding: 8px 16px;
+  background-color: #1E90FF; /* Consistent blue */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-  text-decoration: underline;
+nav a:hover,
+nav a.active {
+  background-color: #3CA0FF; /* Lighter blue on hover or active */
+  text-decoration: none;
 }
 
 /* Hero Section */
