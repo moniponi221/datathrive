@@ -129,3 +129,36 @@ footer {
     height: auto;
   }
 }
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.ceo-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.ceo-text {
+  max-width: 600px;
+}
+
+.ceo-text h3 {
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+.ceo-text p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
