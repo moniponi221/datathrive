@@ -4,19 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | DataThrive</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
-    /* Basic Reset */
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      margin: 0;
+      font-family: Arial, sans-serif;
       background-color: #f9f9f9;
-      color: #333;
+      margin: 0;
+      padding: 0;
     }
 
     header {
@@ -26,107 +19,48 @@
       text-align: center;
     }
 
-    header nav a {
+    nav a {
       color: white;
       margin: 0 1rem;
       text-decoration: none;
-      font-weight: 600;
-    }
-
-    header nav a:hover {
-      text-decoration: underline;
+      font-weight: bold;
     }
 
     main {
-      max-width: 900px;
+      max-width: 800px;
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 1rem;
     }
 
-    /* Mission Section */
-    .mission-section {
-      background: white;
-      padding: 2rem;
-      margin-bottom: 3rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .mission-section h2 {
-      margin-bottom: 1rem;
-      color: #0052cc;
-    }
-
-    /* Meet the Team Section */
     .about-team-section {
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-
       display: flex;
-      flex-direction: column;  /* Stack vertically */
+      flex-direction: column;
       gap: 2rem;
     }
 
-    .team-header {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #0052cc;
-      font-size: 2rem;
-      font-weight: 700;
-    }
-
     .team-member {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: center;
-      padding: 1rem;
-      border-radius: 8px;
-      background-color: #f1f5f9;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 600px;
-      margin: 0 auto;
     }
 
     .team-photo {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
+      object-fit: cover;
       margin-bottom: 1rem;
       border: 3px solid #0052cc;
-      box-shadow: 0 2px 8px rgba(0,82,204,0.3);
-    }
-
-    .team-member h3 {
-      margin: 0.5rem 0;
-      color: #003a99;
-      font-size: 1.3rem;
-    }
-
-    .team-member p {
-      font-size: 1rem;
-      color: #444;
-      line-height: 1.4;
     }
 
     footer {
-      text-align: center;
-      padding: 1rem;
       background-color: #0052cc;
       color: white;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 500px) {
-      header nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
@@ -134,117 +68,32 @@
   <header>
     <h1>About DataThrive</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="faq.html">FAQ</a>
-      <a href="submit.html">Submit Ticket</a>
-      <a href="contact.html">Contact</a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">FAQ</a>
     </nav>
   </header>
 
   <main>
-    <!-- Mission -->
-    <section class="mission-section">
-      <div class="mission-wrapper">
-        <h2>Our Mission</h2>
-        <p>
-          At DataThrive, we believe health data should work for everyone—not just big institutions. That’s why we empower everyday people to take part in health research by sharing insights from the devices they already wear, like fitness trackers and smartwatches.
-        </p>
-        <p>
-          Inspired by our founder Elijah Grant’s personal experience, our mission is to turn passive data into active progress. We make it simple and secure for users to participate in cutting-edge studies—right from the comfort of their homes.
-        </p>
-        <p>
-          Whether you're walking, sleeping, or tracking your heart rate, you’re not just collecting numbers—you’re fueling innovation. And because we believe your contributions matter, we reward you for them. You're not just getting points—you're accelerating treatments and making healthcare smarter.
-        </p>
-      </div>
-    </section>
+    <h2 style="text-align:center;">Meet the Team</h2>
 
-    <!-- Meet the Team -->
     <section class="about-team-section">
-      <h2 class="team-header">Meet the Team</h2>
-
       <div class="team-member">
-        <img
-          src="https://images.unsplash.com/photo-1731341711957-13c750b9d770?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Elijah Grant - CEO and Founder"
-          class="team-photo"
-        />
+        <img class="team-photo" src="https://images.unsplash.com/photo-1731341711957-13c750b9d770?q=80&w=2787" alt="Elijah Grant" />
         <h3>Elijah Grant - CEO & Founder</h3>
-        <p>
-          After losing a loved one to a preventable illness, Elijah Grant was driven to change how health data is used. He founded DataThrive to give people ownership of their data and a voice in shaping the future of healthcare.
-        </p>
+        <p>Elijah created DataThrive after losing a loved one to a preventable illness. He’s passionate about using data to save lives.</p>
       </div>
 
       <div class="team-member">
-        <img
-          src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-          alt="Marcus Holt - CTO"
-          class="team-photo"
-        />
-        <h3>Marcus Holt - CTO (Chief Technology Officer)</h3>
-        <p>
-          Marcus drives the technical vision of DataThrive, overseeing platform scalability, security, and innovation.
-        </p>
+        <img class="team-photo" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91" alt="Marcus Holt" />
+        <h3>Marcus Holt - CTO</h3>
+        <p>Marcus builds and secures the tech behind DataThrive’s innovative health data platform.</p>
       </div>
 
       <div class="team-member">
-        <img
-          src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-          alt="Jasmine Lee - Head of Customer Support / CX"
-          class="team-photo"
-        />
-        <h3>Jasmine Lee - Head of Customer Support / CX</h3>
-        <p>
-          Jasmine leads our customer experience team, ensuring users receive world-class support and their voices are heard throughout our product development.
-        </p>
-      </div>
-
-      <div class="team-member">
-        <img
-          src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-          alt="Sophia Patel - Head of Research Partnerships"
-          class="team-photo"
-        />
-        <h3>Sophia Patel - Head of Research Partnerships</h3>
-        <p>
-          Sophia builds and nurtures partnerships with leading health research organizations to expand DataThrive’s impact.
-        </p>
-      </div>
-
-      <div class="team-member">
-        <img
-          src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-          alt="Alex Carter - Head of Marketing & Community Growth"
-          class="team-photo"
-        />
-        <h3>Alex Carter - Head of Marketing & Community Growth</h3>
-        <p>
-          Alex leads marketing and community initiatives, growing DataThrive’s user base and fostering an engaged health-conscious community.
-        </p>
-      </div>
-
-      <div class="team-member">
-        <img
-          src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&fit=crop&w=600&q=80"
-          alt="Tyler Chen - Product Manager"
-          class="team-photo"
-        />
-        <h3>Tyler Chen - Product Manager</h3>
-        <p>
-          Tyler brings a user-first mindset to every feature. He ensures DataThrive’s platform is intuitive, motivating, and constantly evolving based on feedback.
-        </p>
-      </div>
-
-      <div class="team-member">
-        <img
-          src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=80"
-          alt="Ayesha Malik - Data Scientist"
-          class="team-photo"
-        />
-        <h3>Ayesha Malik - Data Scientist</h3>
-        <p>
-          Ayesha analyzes thousands of wearable data points and study results to unlock insights that help researchers design smarter, more inclusive studies.
-        </p>
+        <img class="team-photo" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt="Jasmine Lee" />
+        <h3>Jasmine Lee - Head of Support</h3>
+        <p>Jasmine ensures every user feels heard and supported throughout their health data journey.</p>
       </div>
     </section>
   </main>
